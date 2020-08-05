@@ -1,0 +1,46 @@
+{
+  "name": "digital-form-builder",
+  "version": "0.1.0",
+  "description": "Starter project for digital form builder applications",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start config/pm2.json",
+    "build:css": "bin/build-css",
+    "build": "bin/build",
+    "lint": "standard",
+    "unit-test": "lab -v",
+    "test": "npm run lint && npm run unit-test",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DEFRA/digital-form-builder"
+  },
+  "author": "Department for Environment, Food and Rural Affairs <https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs>.",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "boom": "7.2.2",
+    "digital-form-builder-designer": "0.1.7",
+    "digital-form-builder-engine": "0.1.4",
+    "govuk-frontend": "2.3.0",
+    "hapi": "17.7.0",
+    "inert": "5.1.2",
+    "joi": "14.0.6",
+    "nunjucks": "3.1.4",
+    "pdfmake": "0.1.39",
+    "standard": "12.0.1",
+    "vision": "5.4.3",
+    "yar": "9.1.0"
+  },
+  "devDependencies": {
+    "blipp": "3.1.1",
+    "cheerio": "1.0.0-rc.2",
+    "code": "5.2.3",
+    "good": "8.1.1",
+    "good-console": "7.1.0",
+    "good-file": "6.0.1",
+    "good-squeeze": "5.1.0",
+    "lab": "18.0.0",
+    "node-sass": "4.10.0"
+  }
+}
