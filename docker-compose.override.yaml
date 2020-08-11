@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  digital-form-builder:
+    build:
+      target: development
+    ports:
+      - "3009:3009"
+      - "9229:9229"
+    volumes:
+      - ./server/:/home/node/server/
+      - ./test/:/home/node/test/
+      - ./test-output/:/home/node/test-output/
+      - ./index.js:/home/node/index.js
+      - ./package.json:/home/node/package.json
+

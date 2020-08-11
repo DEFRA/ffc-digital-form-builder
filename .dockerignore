@@ -1,0 +1,14 @@
+node_modules/
+test-output/
+.dockerignore
+test-output
+
+helm
+docker-compose*
+Jenkinsfile
+LICENSE
+readme.md
+server/build/stylesheets/*.css
+Dockerfile
+Procfile
+npm-debug.log

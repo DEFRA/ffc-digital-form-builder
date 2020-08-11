@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  digital-form-builder:
+    build:
+      target: development
+    command: npm run test
+    volumes:
+      - ./test-output/:/home/node/test-output/
