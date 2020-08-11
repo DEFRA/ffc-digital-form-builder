@@ -1,9 +1,9 @@
 version: '3.7'
 
 services:
-  digital-form-builder:
+  ffc-digital-form-builder:
     build:
       context: .
       target: production
-    image: digital-form-builder
-    container_name: digital-form-builder
+    image: ffc-digital-form-builder
+    container_name: ffc-digital-form-builder

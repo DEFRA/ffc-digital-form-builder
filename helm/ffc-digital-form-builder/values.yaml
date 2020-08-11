@@ -19,18 +19,18 @@ service:
 
 container:
   imagePullPolicy: IfNotPresent
-  requestMemory: 60Mi
-  requestCpu: 60m
-  limitMemory: 60Mi
-  limitCpu: 60m
+  requestMemory: 200Mi
+  requestCpu: 200m
+  limitMemory: 200Mi
+  limitCpu: 200m
   readOnlyRootFilesystem: true
   allowPrivilegeEscalation: false
   port: 3009
 
 ingress:
   class: nginx
-  endpoint: ffc-digital-form-builder
-  server: example.com
+  endpoint:
+  server:
 
 deployment:
   restartPolicy: Always
