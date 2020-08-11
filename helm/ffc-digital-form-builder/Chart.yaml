@@ -1,0 +1,9 @@
+apiVersion: v2
+description: A Helm chart to deploy the digital form builder to Kubernetes
+name: ffc-digital-form-builder
+# this version is automatically updated in the build pipline
+version: 1.0.0
+dependencies:
+- name: ffc-helm-library
+  version: ^1.3.0
+  repository: https://raw.githubusercontent.com/defra/ffc-helm-repository/master/

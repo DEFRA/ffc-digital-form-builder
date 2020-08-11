@@ -1,0 +1,6 @@
+{{- include "ffc-helm-library.container-config-map" (list . "ffc-digital-form-builder.config-map") -}}
+{{- define "ffc-digital-form-builder.config-map" -}}
+data:
+  NODE_ENV: {{ quote .Values.environment }}
+  PORT: {{ quote .Values.container.port }}
+{{- end -}}
