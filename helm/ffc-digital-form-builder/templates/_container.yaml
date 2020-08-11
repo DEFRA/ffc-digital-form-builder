@@ -1,0 +1,6 @@
+{{- define "ffc-digital-form-builder.container" -}}
+ports:
+- containerPort: {{ .Values.container.port }}
+  name: http
+  protocol: TCP
+{{- end -}}

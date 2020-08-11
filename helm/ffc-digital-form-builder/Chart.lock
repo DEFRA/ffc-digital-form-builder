@@ -1,0 +1,6 @@
+dependencies:
+- name: ffc-helm-library
+  repository: https://raw.githubusercontent.com/defra/ffc-helm-repository/master/
+  version: ^1.3.0
+digest: sha256:c0a451d8967f7390ed0a54108da46cbfecbadbc5fc18e08a12791583f3217042
+generated: "2020-08-11T10:58:20.1845014+01:00"

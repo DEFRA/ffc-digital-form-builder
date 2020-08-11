@@ -1,0 +1,43 @@
+environment: development
+name: ffc-digital-form-builder
+namespace: ffc-digital-form-builder
+image: ffc-digital-form-builder
+workstream: ffc-digital-form-builder
+
+labels:
+  component: web
+
+appInsights:
+  key:
+
+containerConfigMap:
+  name: ffc-digital-form-builder-config-map
+
+service:
+  port: 80
+  type: ClusterIP
+
+container:
+  imagePullPolicy: IfNotPresent
+  requestMemory: 200Mi
+  requestCpu: 200m
+  limitMemory: 200Mi
+  limitCpu: 200m
+  readOnlyRootFilesystem: true
+  allowPrivilegeEscalation: false
+  port: 3009
+
+ingress:
+  class: nginx
+  endpoint:
+  server:
+
+deployment:
+  restartPolicy: Always
+  priorityClassName: low
+  replicas: 1
+  minReadySeconds: 5
+  redeployOnChange: update this field to force a change
+  imagePullSecret:
+  runAsNonRoot: true
+  runAsUser: 1000
