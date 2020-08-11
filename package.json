@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "pm2 start config/pm2.json",
-    "build:css": "bin/build-css",
-    "build": "bin/build",
+    "start:watch": "npm-run-all --parallel build:css-watch start:nodemon",
+    "start:nodemon": "nodemon --inspect=0.0.0.0 --ext css,js,njk --legacy-watch index.js",
+    "build": "npm run build:css",
+    "build:css": "node-sass --output=server/public/build/stylesheets --output-style=expanded server/public/build/stylesheets",
+    "build:css-watch": "node-sass --output=server/public/build/stylesheets --output-style=expanded --source-map true --watch server/public/build/stylesheets",
     "lint": "standard",
     "unit-test": "lab -v",
-    "test": "npm run lint && npm run unit-test",
-    "postinstall": "npm run build"
+    "test": "npm run lint && npm run unit-test"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,8 @@
     "good-file": "6.0.1",
     "good-squeeze": "5.1.0",
     "lab": "18.0.0",
-    "node-sass": "4.10.0"
+    "node-sass": "4.10.0",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5"
   }
 }
