@@ -29,8 +29,8 @@ container:
 
 ingress:
   class: nginx
-  endpoint:
-  server:
+  endpoint: ffc-digital-form-builder
+  server: example.com
 
 deployment:
   restartPolicy: Always
