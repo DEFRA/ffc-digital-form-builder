@@ -1,6 +1,6 @@
 {
   "name": "digital-form-builder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Starter project for digital form builder applications",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "build:css-watch": "node-sass --output=server/public/build/stylesheets --output-style=expanded --source-map true --watch server/public/build/stylesheets",
     "lint": "standard",
     "unit-test": "lab -v",
-    "test": "npm run lint && npm run unit-test"
+    "sample-test": "lab -v -I globalThis -P sample -r console -o stdout -r html -o test-output/coverage.html -r lcov -o test-output/lcov.info -r json -o test-output/data.json -r junit -o test-output/junit.xml",
+    "test": "npm run lint && npm run sample-test"
   },
   "repository": {
     "type": "git",
