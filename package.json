@@ -12,7 +12,8 @@
     "build:css-watch": "node-sass --output=server/public/build/stylesheets --output-style=expanded --source-map true --watch server/public/build/stylesheets",
     "lint": "standard",
     "unit-test": "lab -v",
-    "test": "npm run lint"
+    "sample-test": "lab -v -I globalThis -P sample -r console -o stdout -r html -o test-output/coverage.html -r lcov -o test-output/lcov.info -r json -o test-output/data.json",
+    "test": "npm run lint && npm run sample-test"
   },
   "repository": {
     "type": "git",
